@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Delivery Notes",
+    "version": "1.0",
+    "description": "TBD",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.lieferando.at/*"],
+        "js": ["content-lieferando.js"]
+      }
+    ]
+  }
+  
