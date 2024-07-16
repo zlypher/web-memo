@@ -1,13 +1,16 @@
 {
-  "manifest_version": 3,
-  "name": "Delivery Notes",
-  "version": "1.0",
-  "description": "TBD",
-  "permissions": ["activeTab"],
-  "content_scripts": [
-    {
-      "matches": ["https://www.lieferando.at/speisekarte/*"],
-      "js": ["content-lieferando.js"]
-    }
-  ]
+    "manifest_version": 3,
+    "name": "Delivery Notes",
+    "version": "1.0",
+    "description": "TBD",
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.lieferando.at/speisekarte/*"],
+            "js": [
+                "node_modules/webextension-polyfill/dist/browser-polyfill.js",
+                "content-lieferando.js"
+            ]
+        }
+    ]
 }
