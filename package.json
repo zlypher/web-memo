@@ -1,17 +1,19 @@
 {
-  "name": "delivery-notes",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "web-ext lint",
-    "start:chrome": "web-ext run --target=chromium"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "web-ext": "^8.2.0",
-    "webextension-polyfill": "^0.12.0"
-  }
+    "name": "delivery-notes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "web-ext lint",
+        "build": "web-ext build",
+        "start:chrome": "web-ext run --target=chromium --browser-console",
+        "start:firefox": "web-ext run --target=firefox-desktop --browser-console"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "web-ext": "^8.2.0",
+        "webextension-polyfill": "^0.12.0"
+    }
 }
