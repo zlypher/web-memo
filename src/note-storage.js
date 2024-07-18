@@ -31,6 +31,4 @@ export async function saveNotes(identifier, notes) {
     } catch (e) {
         console.error(e);
     }
-
-    closePopover();
 }
