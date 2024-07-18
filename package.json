@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "translate": "wet",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "web-ext lint",
         "build": "web-ext build",
@@ -14,6 +15,7 @@
     "license": "MIT",
     "devDependencies": {
         "web-ext": "^8.2.0",
+        "web-ext-translator": "^4.3.0",
         "webextension-polyfill": "^0.12.0"
     }
 }
