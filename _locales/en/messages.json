@@ -1,0 +1,15 @@
+{
+    "extensionName": {
+        "message": "Delivery Notes",
+        "description": "Name of the extension."
+    },
+
+    "extensionDescription": {
+        "message": "tbd",
+        "description": "Description of the extension."
+    },
+    "testMessage": {
+        "message": "Hello World EN",
+        "description": "tbd"
+    }
+}

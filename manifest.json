@@ -3,6 +3,7 @@
     "name": "Delivery Notes",
     "version": "1.0",
     "description": "TBD",
+    "default_locale": "de",
     "permissions": ["activeTab", "storage"],
     "content_scripts": [
         {
