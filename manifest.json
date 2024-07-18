@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Delivery Notes",
+    "name": "__MSG_extensionName__",
     "version": "1.0",
-    "description": "TBD",
+    "description": "__MSG_extensionDescription__",
     "default_locale": "de",
     "permissions": ["activeTab", "storage"],
     "content_scripts": [
