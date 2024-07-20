@@ -1,11 +1,11 @@
 // TODO: Support different languages and URL structures
 import { loadNotesByIdentifier, saveNotes } from "./note-storage";
 import { CLASS_NOTES_TEXT, getRestaurantNotesTemplate } from "./popover-utils";
+import { extractIdentifierFromUrl } from "./url-identifier";
 
 const SELECTOR_DISHES = "[data-qa=item]";
 const SELECTOR_RESTAURANT_HEADER = "[data-qa=restaurant-header]";
 const SELECTOR_NOTES_TEXT = `.${CLASS_NOTES_TEXT}`;
-const EXTRACT_IDENTIFIER_REGEX = /\/speisekarte\/([\w-]*)/;
 
 let identifier;
 
@@ -24,24 +24,6 @@ async function waitForPageLoaded() {
     }
 
     throw new Error("Didn't detect page loaded in time");
-}
-
-/**
- * Try to extract and return an unique identifier for the restaurant
- * from the pathname of the URL. If the extraction fails for any
- * reason, return undefined.
- */
-function extractIdentifierFromUrl(pathname) {
-    if (!pathname) {
-        return undefined;
-    }
-
-    const result = pathname.match(EXTRACT_IDENTIFIER_REGEX);
-    if (!result) {
-        return undefined;
-    }
-
-    return result[1];
 }
 
 function closePopover() {
