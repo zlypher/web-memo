@@ -1,15 +1,13 @@
 {
     "extensionName": {
         "message": "Delivery Notes",
-        "description": "Name of the extension."
+        "description": "Name of the extension.",
+        "hash": "9c91b4cacc415da4ccbfae2339752b8c"
+    },
+    "extensionDescription": {
+        "message": "A web extension to record and manage notes and experiences from your takeout orders on websites like Lieferando.",
+        "hash": "c1433f4494bf2624edc9d3d86609d6bf"
     },
 
-    "extensionDescription": {
-        "message": "tbd",
-        "description": "Description of the extension."
-    },
-    "testMessage": {
-        "message": "Hello World EN",
-        "description": "tbd"
-    }
+    "__WET_LOCALE__": { "message": "en" }
 }

@@ -3,13 +3,9 @@
         "message": "Delivery Notes",
         "description": "Name of the extension."
     },
-
     "extensionDescription": {
-        "message": "tbd",
-        "description": "Description of the extension."
+        "message": "Eine Browser-Erweiterung, um Notizen und Erfahrungen von Ihren Bestellungen bei Lieferdiensten auf Websites wie Lieferando zu erfassen und zu verwalten."
     },
-    "testMessage": {
-        "message": "Hello World DE",
-        "description": "tbd"
-    }
+
+    "__WET_LOCALE__": { "message": "de" }
 }
