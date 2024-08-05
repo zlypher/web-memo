@@ -1,3 +1,5 @@
+import browser from "webextension-polyfill";
+
 /**
  * Load the notes for the current restaurant identified via the identifier
  * from the sync storage. If there are no notes yet, or there is an error,
@@ -25,6 +27,8 @@ export async function loadNotesByIdentifier(identifier) {
  */
 export async function saveNotes(identifier, notes) {
     const key = `NOTES_${identifier}`;
+
+    console.log("save", key, notes);
 
     try {
         await browser.storage.sync.set({ [key]: notes });

@@ -6,6 +6,12 @@
     "extensionDescription": {
         "message": "Eine Browser-Erweiterung, um Notizen und Erfahrungen von Ihren Bestellungen bei Lieferdiensten auf Websites wie Lieferando zu erfassen und zu verwalten."
     },
+    "popupTextPlaceholder": {
+        "message": "Mach dir hier ein paar Notizen zum Restaurant."
+    },
+    "popupSaveButton": {
+        "message": "Speichern"
+    },
 
     "__WET_LOCALE__": { "message": "de" }
 }

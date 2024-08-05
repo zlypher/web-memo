@@ -8,6 +8,14 @@
         "message": "A web extension to record and manage notes and experiences from your takeout orders on websites like Lieferando.",
         "hash": "c1433f4494bf2624edc9d3d86609d6bf"
     },
+    "popupTextPlaceholder": {
+        "message": "Add some notes to the restaurant here.",
+        "hash": "01620f8fad1cc76c99a4d47bdf7e1624"
+    },
+    "popupSaveButton": {
+        "message": "Save",
+        "hash": "7d0c7803fe0813d09b9f196ae028d18b"
+    },
 
     "__WET_LOCALE__": { "message": "en" }
 }
