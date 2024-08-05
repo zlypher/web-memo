@@ -12,6 +12,7 @@ body {
     margin-bottom: 1em;
     width: 100%;
     min-height: 200px;
+    resize: none;
 }
 
 .dn-restaurant-notes__save {
