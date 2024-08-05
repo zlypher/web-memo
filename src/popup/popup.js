@@ -38,7 +38,6 @@ async function initialize() {
     document
         .querySelector(".dn-restaurant-notes__save")
         .addEventListener("click", () => {
-            console.log("on click");
             const notes = document.querySelector(
                 ".dn-restaurant-notes__text"
             ).value;
