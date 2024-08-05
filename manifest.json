@@ -1,5 +1,10 @@
 {
     "manifest_version": 3,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "zlypher@delivery-notes"
+        }
+    },
     "name": "__MSG_extensionName__",
     "version": "1.0",
     "description": "__MSG_extensionDescription__",
