@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    width: 500px;
+    max-width: 100%;
+    color: #0f172a;
+}
+
+.dn-restaurant-notes__text {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    min-height: 200px;
+}
+
+.dn-restaurant-notes__save {
+    align-self: flex-end;
+}

@@ -5,13 +5,12 @@
     "description": "__MSG_extensionDescription__",
     "default_locale": "de",
     "permissions": ["activeTab", "storage"],
-    "content_scripts": [
-        {
-            "matches": ["https://www.lieferando.at/speisekarte/*"],
-            "js": [
-                "node_modules/webextension-polyfill/dist/browser-polyfill.js",
-                "dist/content-lieferando.js"
-            ]
+    "action": {
+        "default_popup": "dist/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
         }
-    ]
+    }
 }
