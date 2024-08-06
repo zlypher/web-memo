@@ -2,9 +2,12 @@ import browser from "webextension-polyfill";
 import mixpanel from "mixpanel-browser";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
-import { loadNotesByIdentifier, saveNotes } from "../note-storage";
-import { extractIdentifierFromUrl, isRelevantUrl } from "../url-identifier";
-import { localizeHtmlPage } from "../localize-html";
+import { loadNotesByIdentifier, saveNotes } from "../utils/note-storage";
+import {
+    extractIdentifierFromUrl,
+    isRelevantUrl,
+} from "../utils/url-identifier";
+import { localizeHtmlPage } from "../utils/localize-html";
 
 mixpanel.init("b6a9bb270b20eadfaf653f4bb86b9412", {
     track_pageview: true,
