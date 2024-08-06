@@ -1,5 +1,7 @@
 import browser from "webextension-polyfill";
 import mixpanel from "mixpanel-browser";
+import Quill from "quill";
+import "quill/dist/quill.snow.css";
 import { loadNotesByIdentifier, saveNotes } from "../note-storage";
 import { extractIdentifierFromUrl, isRelevantUrl } from "../url-identifier";
 import { localizeHtmlPage } from "../localize-html";
@@ -37,6 +39,10 @@ async function initialize() {
             .querySelector(".dn-restaurant-notes__dnt")
             .classList.add("hidden");
     }
+    const quill = new Quill("#editor", {
+        placeholder: browser.i18n.getMessage("popupTextPlaceholder"),
+        theme: "snow",
+    });
 
     const url = await getCurrentActiveTabUrl();
     // Step 1: Check URL
@@ -53,7 +59,7 @@ async function initialize() {
     // Step 3: Load notes if there are already some stored
     const savedNotes = await loadNotesByIdentifier(identifier);
     if (savedNotes) {
-        document.querySelector(".dn-restaurant-notes__text").value = savedNotes;
+        quill.setContents(savedNotes);
     }
 
     document
@@ -66,9 +72,8 @@ async function initialize() {
         .querySelector(".dn-restaurant-notes__save")
         .addEventListener("click", () => {
             mixpanel.track("Save Notes");
-            const notes = document.querySelector(
-                ".dn-restaurant-notes__text"
-            ).value;
+            const notes = quill.getContents();
+            console.log(notes);
 
             saveNotes(identifier, notes);
         });

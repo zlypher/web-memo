@@ -7,12 +7,10 @@ body {
     color: #0f172a;
 }
 
-.dn-restaurant-notes__text {
-    display: block;
+#editor {
     margin-bottom: 1em;
-    width: 100%;
-    min-height: 200px;
-    resize: none;
+    max-height: 300px;
+    overflow: auto;
 }
 
 .dn-restaurant-notes__footer {
@@ -26,10 +24,12 @@ body {
     outline: 0;
     background: none;
     color: #999;
+    cursor: pointer;
 }
 
 .dn-restaurant-notes__save {
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .hidden {
