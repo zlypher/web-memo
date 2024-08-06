@@ -12,6 +12,10 @@
         "message": "Add some notes to the restaurant here.",
         "hash": "01620f8fad1cc76c99a4d47bdf7e1624"
     },
+    "popupDntButton": {
+        "message": "Opt-out of anonymous tracking",
+        "hash": "770cdced1feb34946f4523de3ea65a3d"
+    },
     "popupSaveButton": {
         "message": "Save",
         "hash": "7d0c7803fe0813d09b9f196ae028d18b"

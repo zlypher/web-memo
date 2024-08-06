@@ -9,6 +9,9 @@
     "popupTextPlaceholder": {
         "message": "Mach dir hier ein paar Notizen zum Restaurant."
     },
+    "popupDntButton": {
+        "message": "Anonymes Tracking abdrehen"
+    },
     "popupSaveButton": {
         "message": "Speichern"
     },
