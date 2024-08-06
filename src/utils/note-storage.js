@@ -28,8 +28,6 @@ export async function loadNotesByIdentifier(identifier) {
 export async function saveNotes(identifier, notes) {
     const key = `NOTES_${identifier}`;
 
-    console.log("save", key, notes);
-
     try {
         await browser.storage.sync.set({ [key]: notes });
     } catch (e) {

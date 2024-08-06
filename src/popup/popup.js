@@ -3,10 +3,6 @@ import mixpanel from "mixpanel-browser";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { loadNotesByIdentifier, saveNotes } from "../utils/note-storage";
-import {
-    extractIdentifierFromUrl,
-    isRelevantUrl,
-} from "../utils/url-identifier";
 import { localizeHtmlPage } from "../utils/localize-html";
 
 mixpanel.init("b6a9bb270b20eadfaf653f4bb86b9412", {
@@ -23,8 +19,6 @@ mixpanel.init("b6a9bb270b20eadfaf653f4bb86b9412", {
 });
 mixpanel.identify("web-ext");
 
-let identifier;
-
 async function getCurrentActiveTabUrl() {
     const tabs = await browser.tabs.query({
         active: true,
@@ -34,32 +28,29 @@ async function getCurrentActiveTabUrl() {
     return url;
 }
 
-async function initialize() {
+function hideDntNote() {
+    document.querySelector(".dn-restaurant-notes__dnt").classList.add("hidden");
+}
+
+function initializePopup() {
     localizeHtmlPage();
 
     if (mixpanel.has_opted_out_tracking()) {
-        document
-            .querySelector(".dn-restaurant-notes__dnt")
-            .classList.add("hidden");
+        hideDntNote();
     }
     const quill = new Quill("#editor", {
         placeholder: browser.i18n.getMessage("popupTextPlaceholder"),
         theme: "snow",
     });
 
-    const url = await getCurrentActiveTabUrl();
-    // Step 1: Check URL
-    if (!isRelevantUrl(url)) {
-        return;
-    }
+    return { quill };
+}
 
-    // Step 2: Find a unique identifier for the current restaurant
-    identifier = extractIdentifierFromUrl(url);
-    if (!identifier) {
-        return;
-    }
+async function initialize() {
+    const { quill } = initializePopup();
 
     // Step 3: Load notes if there are already some stored
+    const identifier = await getCurrentActiveTabUrl();
     const savedNotes = await loadNotesByIdentifier(identifier);
     if (savedNotes) {
         quill.setContents(savedNotes);
@@ -69,6 +60,7 @@ async function initialize() {
         .querySelector(".dn-restaurant-notes__dnt")
         .addEventListener("click", () => {
             mixpanel.opt_out_tracking();
+            hideDntNote();
         });
 
     document
@@ -76,7 +68,6 @@ async function initialize() {
         .addEventListener("click", () => {
             mixpanel.track("Save Notes");
             const notes = quill.getContents();
-            console.log(notes);
 
             saveNotes(identifier, notes);
         });
