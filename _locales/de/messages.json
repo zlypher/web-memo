@@ -12,6 +12,9 @@
     "popupDntButton": {
         "message": "Anonymes Tracking abdrehen"
     },
+    "optionsHeadline": {
+        "message": "Delivery Notes Einstellungen"
+    },
     "popupSaveButton": {
         "message": "Speichern"
     },

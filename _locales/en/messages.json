@@ -16,6 +16,10 @@
         "message": "Opt-out of anonymous tracking",
         "hash": "770cdced1feb34946f4523de3ea65a3d"
     },
+    "optionsHeadline": {
+        "message": "Delivery Notes Settings",
+        "hash": "8f331a47eb381a732d89b15b4645d5ad"
+    },
     "popupSaveButton": {
         "message": "Save",
         "hash": "7d0c7803fe0813d09b9f196ae028d18b"
