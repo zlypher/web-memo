@@ -1,13 +1,16 @@
-import browser from "webextension-polyfill";
 import { localizeHtmlPage } from "../utils/localize-html";
+import { loadAllNotes } from "../utils/note-storage";
 
-async function loadAllSavedNotes() {
-    return await browser.storage.sync.get();
-}
+const getNoteEntryTemplate = ({ key }) => {
+    return `
+    <article>
+        <div>${key}</div>
+    </article>
+    `;
+};
 
 function createElementsForNotes(notes) {
     const container = document.querySelector(".dn-restaurant-notes__keys");
-    console.log("container", container);
     if (!container || !notes) {
         return;
     }
@@ -17,8 +20,16 @@ function createElementsForNotes(notes) {
         return;
     }
 
+    const wrapper = document.querySelector(".dn-restaurant-notes__keys");
+
     for (let [key, value] of entries) {
-        console.log(key, value);
+        let html = getNoteEntryTemplate({ key });
+
+        const template = document.createElement("template");
+        template.innerHTML = html;
+        const elements = template.content.children;
+
+        wrapper.appendChild(elements[0]);
     }
 }
 
@@ -31,14 +42,11 @@ function initTrackingHandler() {
 }
 
 async function initialize() {
-    console.log("initialize");
-
     localizeHtmlPage();
 
-    let results = await loadAllSavedNotes();
-    createElementsForNotes(results);
+    let notes = await loadAllNotes();
+    createElementsForNotes(notes);
     initTrackingHandler();
-    console.log(results);
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
