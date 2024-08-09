@@ -22,6 +22,14 @@ function createElementsForNotes(notes) {
     }
 }
 
+function initTrackingHandler() {
+    document
+        .querySelector(".dn-restaurant-notes__toggle-tracking")
+        .addEventListener("click", () => {
+            // TBD
+        });
+}
+
 async function initialize() {
     console.log("initialize");
 
@@ -29,6 +37,7 @@ async function initialize() {
 
     let results = await loadAllSavedNotes();
     createElementsForNotes(results);
+    initTrackingHandler();
     console.log(results);
 }
 

@@ -20,9 +20,29 @@
         "message": "Delivery Notes Settings",
         "hash": "8f331a47eb381a732d89b15b4645d5ad"
     },
+    "popupOptionsLink": {
+        "message": "Options",
+        "hash": "356f023f8507d6d75bc53971d33a573b"
+    },
     "popupSaveButton": {
         "message": "Save",
         "hash": "7d0c7803fe0813d09b9f196ae028d18b"
+    },
+    "optionsSavedNotes": {
+        "message": "Saved Notes",
+        "hash": "99b196f0441879c77fdcf5d51a65d8a7"
+    },
+    "optionsPrivacy": {
+        "message": "Privacy",
+        "hash": "ede8adae4fd90129917a5654ae59c9be"
+    },
+    "optionsPrivacyNotesShort": {
+        "message": "tbd",
+        "hash": "c1433f4494bf2624edc9d3d86609d6bf"
+    },
+    "optionsPrivacyToggleTracking": {
+        "message": "Opt-out of anonymous tracking",
+        "hash": "a622f4fe5e030d5d27ebb72b0772f392"
     },
 
     "__WET_LOCALE__": { "message": "en" }

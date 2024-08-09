@@ -15,8 +15,23 @@
     "optionsHeadline": {
         "message": "Delivery Notes Einstellungen"
     },
+    "popupOptionsLink": {
+        "message": "Optionen"
+    },
     "popupSaveButton": {
         "message": "Speichern"
+    },
+    "optionsSavedNotes": {
+        "message": "Gespeicherte Notizen"
+    },
+    "optionsPrivacy": {
+        "message": "Datenschutz"
+    },
+    "optionsPrivacyNotesShort": {
+        "message": "tbd"
+    },
+    "optionsPrivacyToggleTracking": {
+        "message": "Anonymes Tracking abdrehen"
     },
 
     "__WET_LOCALE__": { "message": "de" }

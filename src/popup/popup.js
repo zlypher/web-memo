@@ -57,6 +57,12 @@ async function initialize() {
     }
 
     document
+        .querySelector(".dn-restaurant-notes__options")
+        .addEventListener("click", async () => {
+            await browser.runtime.openOptionsPage();
+        });
+
+    document
         .querySelector(".dn-restaurant-notes__dnt")
         .addEventListener("click", () => {
             mixpanel.opt_out_tracking();
