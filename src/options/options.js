@@ -21,6 +21,10 @@ function createElementsForNotes(notes) {
         return;
     }
 
+    // Hide emtpy State
+    document.querySelector(".dn-restaurant-notes__notes-empty").style.display =
+        "none";
+
     const wrapper = document.querySelector(".dn-restaurant-notes__keys");
 
     for (let [key, value] of entries) {

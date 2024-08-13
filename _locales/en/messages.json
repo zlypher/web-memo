@@ -36,6 +36,10 @@
         "message": "Saved Notes",
         "hash": "99b196f0441879c77fdcf5d51a65d8a7"
     },
+    "optionsNotesEmpty": {
+        "message": "No saved notes found!",
+        "hash": "f97e20bd33e2e0281f7a316147e018b9"
+    },
     "optionsPrivacy": {
         "message": "Privacy",
         "hash": "ede8adae4fd90129917a5654ae59c9be"

@@ -27,6 +27,9 @@
     "optionsSavedNotes": {
         "message": "Gespeicherte Notizen"
     },
+    "optionsNotesEmpty": {
+        "message": "Keine gespeicherten Notizen gefunden!"
+    },
     "optionsPrivacy": {
         "message": "Datenschutz"
     },
