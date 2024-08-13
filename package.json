@@ -9,7 +9,7 @@
         "lint": "web-ext lint -i ./dist",
         "build": "web-ext build",
         "prepare": "parcel --public-url ./ src/popup/popup.html src/options/options.html src/views/installed.html src/background.js",
-        "dev:options": "parcel --public-url ./ src/options/options.html",
+        "dev:options": "parcel src/options/options.html",
         "run:chrome": "web-ext run --target=chromium --browser-console",
         "run:firefox": "web-ext run --target=firefox-desktop --browser-console",
         "start:chrome": "npm-run-all --parallel prepare run:chrome",

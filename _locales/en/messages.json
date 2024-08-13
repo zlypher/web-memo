@@ -28,6 +28,10 @@
         "message": "Save",
         "hash": "7d0c7803fe0813d09b9f196ae028d18b"
     },
+    "optionsIntro": {
+        "message": "Here you can find the settings for Delivery Notes. You can manage your saved notes and adjust privacy settings.",
+        "hash": "0b373414774801a15e8242036b386fd3"
+    },
     "optionsSavedNotes": {
         "message": "Saved Notes",
         "hash": "99b196f0441879c77fdcf5d51a65d8a7"
@@ -37,8 +41,20 @@
         "hash": "ede8adae4fd90129917a5654ae59c9be"
     },
     "optionsPrivacyNotesShort": {
-        "message": "tbd",
-        "hash": "c1433f4494bf2624edc9d3d86609d6bf"
+        "message": "Our extension does not collect any personal data. However, to improve user experience, we collect anonymous usage statistics, such as how often the extension is used. These data help us further optimize the extension. If you do not wish to share these anonymous statistics, you can disable tracking at any time using the button below.",
+        "hash": "aacc9b9a7bf5b0c43601d70526036304"
+    },
+    "optionsPrivacyToggleStatus": {
+        "message": "Anonymous tracking is currently",
+        "hash": "134364f6106386bd336a451cad079e3b"
+    },
+    "optionsPrivacyToggleStatusActive": {
+        "message": "active",
+        "hash": "9e613471fdf12bd896c15da5f0ab6fe2"
+    },
+    "optionsPrivacyToggleStatusInactive": {
+        "message": "inactive",
+        "hash": "fcb505c85a8d3cb857e749ea758f0212"
     },
     "optionsPrivacyToggleTracking": {
         "message": "Opt-out of anonymous tracking",

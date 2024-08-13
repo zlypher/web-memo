@@ -4,6 +4,14 @@ export async function loadAllNotes() {
     return await browser.storage.sync.get();
 }
 
+export async function deleteNoteByIdentifier(identifier) {
+    try {
+        await browser.storage.sync.remove(identifier);
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 /**
  * Load the notes for the current restaurant identified via the identifier
  * from the sync storage. If there are no notes yet, or there is an error,

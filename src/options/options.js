@@ -1,11 +1,12 @@
 import { localizeHtmlPage } from "../utils/localize-html";
-import { loadAllNotes } from "../utils/note-storage";
+import { loadAllNotes, deleteNoteByIdentifier } from "../utils/note-storage";
 
 const getNoteEntryTemplate = ({ key }) => {
     return `
-    <article>
-        <div>${key}</div>
-    </article>
+<article class="dn-restaurant-notes__key">
+    <div>${key}</div>
+    <button class="dn-restaurant-notes__del" data-key="${key}">x</button>
+</article>
     `;
 };
 
@@ -47,6 +48,21 @@ async function initialize() {
     let notes = await loadAllNotes();
     createElementsForNotes(notes);
     initTrackingHandler();
+
+    document.addEventListener("click", (evt) => {
+        if (!evt.target) {
+            return;
+        }
+
+        if (evt.target.classList.contains("dn-restaurant-notes__del")) {
+            const key = evt.target.dataset.key;
+            if (!key) {
+                return;
+            }
+
+            deleteNoteByIdentifier(key);
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

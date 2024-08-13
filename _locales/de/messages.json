@@ -21,6 +21,9 @@
     "popupSaveButton": {
         "message": "Speichern"
     },
+    "optionsIntro": {
+        "message": "Hier finden Sie die Einstellungen zu Delivery Notes. Sie können Ihre gespeicherten Notizen verwalten und Einstellungen zum Datenschutz vornehmen."
+    },
     "optionsSavedNotes": {
         "message": "Gespeicherte Notizen"
     },
@@ -28,7 +31,16 @@
         "message": "Datenschutz"
     },
     "optionsPrivacyNotesShort": {
-        "message": "tbd"
+        "message": "Unsere Erweiterung sammelt keine persönlichen Daten. Um die Benutzerfreundlichkeit zu verbessern, erfassen wir jedoch anonyme Nutzungsstatistiken, wie zum Beispiel, wie oft die Erweiterung verwendet wird. Diese Daten helfen uns, die Erweiterung weiter zu optimieren. Wenn Sie diese anonymen Statistiken nicht teilen möchten, können Sie das Tracking jederzeit mit dem Button unten deaktivieren."
+    },
+    "optionsPrivacyToggleStatus": {
+        "message": "Anonymes Tracking ist derzeit"
+    },
+    "optionsPrivacyToggleStatusActive": {
+        "message": "aktiviert"
+    },
+    "optionsPrivacyToggleStatusInactive": {
+        "message": "deaktiviert"
     },
     "optionsPrivacyToggleTracking": {
         "message": "Anonymes Tracking abdrehen"

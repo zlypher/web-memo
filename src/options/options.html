@@ -8,18 +8,24 @@
 </head>
 
 <body>
-    <main>
+    <main class="dn-restaurant-notes__main">
         <div class="container">
-            <h1 data-i18n>optionsHeadline</h1>
-            <section>
-                <h2 data-i18n>optionsSavedNotes</h2>
+            <h1 data-i18n class="dn-restaurant-notes__headline">optionsHeadline</h1>
+            <p data-i18n class="dn-restaurant-notes__text">optionsIntro</p>
+            <section class="dn-restaurant-notes__section">
+                <h2 data-i18n class="dn-restaurant-notes__subheadline">optionsSavedNotes</h2>
                 <div class="dn-restaurant-notes__keys">
                 </div>
             </section>
-            <section>
-                <h2 data-i18n>optionsPrivacy</h2>
-                <p data-i18n>optionsPrivacyNotesShort</p>
-                <button class="dn-restaurant-notes__toggle-tracking" data-i18n>optionsPrivacyToggleTracking</button>
+            <hr class="dn-restaurant-notes__divider" />
+            <section class="dn-restaurant-notes__section">
+                <h2 data-i18n class="dn-restaurant-notes__subheadline">optionsPrivacy</h2>
+                <p data-i18n class="dn-restaurant-notes__text">optionsPrivacyNotesShort</p>
+                <div class="dn-restaurant-notes__toggle-wrapper">
+                    <span data-i18n>optionsPrivacyToggleStatus<span data-i18n
+                            class="dn-restaurant-notes__toggle-status">optionsPrivacyToggleStatusActive</span></span>
+                    <button class="dn-restaurant-notes__toggle-tracking" data-i18n>optionsPrivacyToggleTracking</button>
+                </div>
             </section>
         </div>
     </main>

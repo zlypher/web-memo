@@ -1,9 +1,76 @@
-main {
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #1e293b;
+}
+
+.dn-restaurant-notes__main {
     width: 100vw;
+    background: #f8fafc;
+    height: 100vh;
+    padding: 2em 0;
+    box-sizing: border-box;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 720px;
     padding: 0 32px;
+}
+
+.dn-restaurant-notes__headline {
+    margin-bottom: 1.5em;
+}
+
+.dn-restaurant-notes__divider {
+    margin: 2em 4em;
+    border: none;
+    border-top: 1px solid #64748b;
+}
+
+.dn-restaurant-notes__subheadline {
+    margin-bottom: 1em;
+}
+
+.dn-restaurant-notes__key {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 0.5em 0;
+}
+
+.dn-restaurant-notes__text {
+    line-height: 1.7em;
+}
+
+.dn-restaurant-notes__del {
+    width: 30px;
+    height: 30px;
+}
+
+.dn-restaurant-notes__toggle-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dn-restaurant-notes__toggle-status {
+    font-weight: bold;
+}
+
+.dn-restaurant-notes__del,
+.dn-restaurant-notes__toggle-tracking {
+    background: none;
+    border: 1px solid #1e293b;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dn-restaurant-notes__del:hover,
+.dn-restaurant-notes__toggle-tracking:hover {
+    background: #94a3b8;
 }
