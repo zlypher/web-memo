@@ -22,14 +22,6 @@ body {
     justify-content: space-between;
 }
 
-.dn-restaurant-notes__dnt {
-    border: 0;
-    outline: 0;
-    background: none;
-    color: #999;
-    cursor: pointer;
-}
-
 .dn-restaurant-notes__save {
     align-self: flex-end;
     cursor: pointer;

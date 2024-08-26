@@ -12,10 +12,6 @@
         "message": "Add some notes to the restaurant here.",
         "hash": "01620f8fad1cc76c99a4d47bdf7e1624"
     },
-    "popupDntButton": {
-        "message": "Opt-out of anonymous tracking",
-        "hash": "770cdced1feb34946f4523de3ea65a3d"
-    },
     "optionsHeadline": {
         "message": "Delivery Notes Settings",
         "hash": "8f331a47eb381a732d89b15b4645d5ad"
@@ -45,24 +41,8 @@
         "hash": "ede8adae4fd90129917a5654ae59c9be"
     },
     "optionsPrivacyNotesShort": {
-        "message": "Our extension does not collect any personal data. However, to improve user experience, we collect anonymous usage statistics, such as how often the extension is used. These data help us further optimize the extension. If you do not wish to share these anonymous statistics, you can disable tracking at any time using the button below.",
+        "message": "Our extension does not collect any personal data.",
         "hash": "aacc9b9a7bf5b0c43601d70526036304"
-    },
-    "optionsPrivacyToggleStatus": {
-        "message": "Anonymous tracking is currently",
-        "hash": "134364f6106386bd336a451cad079e3b"
-    },
-    "optionsPrivacyToggleStatusActive": {
-        "message": "active",
-        "hash": "9e613471fdf12bd896c15da5f0ab6fe2"
-    },
-    "optionsPrivacyToggleStatusInactive": {
-        "message": "inactive",
-        "hash": "fcb505c85a8d3cb857e749ea758f0212"
-    },
-    "optionsPrivacyToggleTracking": {
-        "message": "Opt-out of anonymous tracking",
-        "hash": "a622f4fe5e030d5d27ebb72b0772f392"
     },
 
     "__WET_LOCALE__": { "message": "en" }

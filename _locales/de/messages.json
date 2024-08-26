@@ -9,9 +9,6 @@
     "popupTextPlaceholder": {
         "message": "Mach dir hier ein paar Notizen zum Restaurant."
     },
-    "popupDntButton": {
-        "message": "Anonymes Tracking abdrehen"
-    },
     "optionsHeadline": {
         "message": "Delivery Notes Einstellungen"
     },
@@ -34,19 +31,7 @@
         "message": "Datenschutz"
     },
     "optionsPrivacyNotesShort": {
-        "message": "Unsere Erweiterung sammelt keine persönlichen Daten. Um die Benutzerfreundlichkeit zu verbessern, erfassen wir jedoch anonyme Nutzungsstatistiken, wie zum Beispiel, wie oft die Erweiterung verwendet wird. Diese Daten helfen uns, die Erweiterung weiter zu optimieren. Wenn Sie diese anonymen Statistiken nicht teilen möchten, können Sie das Tracking jederzeit mit dem Button unten deaktivieren."
-    },
-    "optionsPrivacyToggleStatus": {
-        "message": "Anonymes Tracking ist derzeit"
-    },
-    "optionsPrivacyToggleStatusActive": {
-        "message": "aktiviert"
-    },
-    "optionsPrivacyToggleStatusInactive": {
-        "message": "deaktiviert"
-    },
-    "optionsPrivacyToggleTracking": {
-        "message": "Anonymes Tracking abdrehen"
+        "message": "Unsere Erweiterung sammelt keine persönlichen Daten."
     },
 
     "__WET_LOCALE__": { "message": "de" }

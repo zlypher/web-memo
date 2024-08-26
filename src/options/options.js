@@ -38,20 +38,11 @@ function createElementsForNotes(notes) {
     }
 }
 
-function initTrackingHandler() {
-    document
-        .querySelector(".dn-restaurant-notes__toggle-tracking")
-        .addEventListener("click", () => {
-            // TBD
-        });
-}
-
 async function initialize() {
     localizeHtmlPage();
 
     let notes = await loadAllNotes();
     createElementsForNotes(notes);
-    initTrackingHandler();
 
     document.addEventListener("click", (evt) => {
         if (!evt.target) {
