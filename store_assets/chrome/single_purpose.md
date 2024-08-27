@@ -1,0 +1,1 @@
+The extension allows the user to save text memos to individual websites. This can be used for example for food delivery websites to remember which were good.

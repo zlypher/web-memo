@@ -1,0 +1,1 @@
+The extension needs to have the "activeTab" permission to find out the URL of the current tab. This is required, so that the URL can be used as an identifier to store notes.

@@ -1,0 +1,1 @@
+The extension needs to have the "storage" permission to store the notes for individual websites. Browser storage is the only place where this information is stored.
