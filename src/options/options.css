@@ -22,23 +22,18 @@ body {
 }
 
 .headline {
-    margin-bottom: 1.5em;
-}
-
-.divider {
-    margin: 2em 4em;
-    border: none;
-    border-top: 1px solid #64748b;
+    margin-bottom: 0.5em;
 }
 
 .subheadline {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .key {
     display: flex;
     justify-content: space-between;
-    font-size: 1.2em;
+    align-items: center;
+    font-size: 1em;
     padding: 0.5em 0;
 }
 

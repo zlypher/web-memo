@@ -4,11 +4,43 @@ import { loadAllMemos, deleteMemoByIdentifier } from "../utils/memo-storage";
 const getMemoEntryTemplate = ({ key }) => {
     return `
 <article class="key">
-    <div>${key}</div>
+    <div><a href="${key}" target="_blank">${key}</a></div>
     <button class="del" data-key="${key}">x</button>
 </article>
     `;
 };
+
+function findMemoEl(currentEl) {
+    if (!currentEl) {
+        return;
+    }
+
+    if (currentEl.classList.contains("key")) {
+        return currentEl;
+    }
+
+    return findMemoEl(currentEl.parentNode);
+}
+
+function deleteMemo(deleteBtnEl) {
+    if (!deleteBtnEl) {
+        return;
+    }
+
+    const key = deleteBtnEl.dataset.key;
+    if (!key) {
+        return;
+    }
+
+    deleteMemoByIdentifier(key);
+
+    let memoEl = findMemoEl(deleteBtnEl);
+    if (!memoEl) {
+        return;
+    }
+
+    memoEl.remove();
+}
 
 function createElementsForMemos(notes) {
     const container = document.querySelector(".keys");
@@ -49,12 +81,7 @@ async function initialize() {
         }
 
         if (evt.target.classList.contains("del")) {
-            const key = evt.target.dataset.key;
-            if (!key) {
-                return;
-            }
-
-            deleteMemoByIdentifier(key);
+            deleteMemo(evt.target);
         }
     });
 }
