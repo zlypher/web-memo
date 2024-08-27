@@ -1,5 +1,5 @@
 {
-    "name": "delivery-notes",
+    "name": "web-memo",
     "version": "1.0.0",
     "description": "A web extension to record and manage notes and experiences from your takeout orders on websites like Lieferando.",
     "main": "index.js",
@@ -8,19 +8,19 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "web-ext lint -i ./dist",
         "build": "web-ext build",
-        "prepare": "parcel --public-url ./ src/popup/popup.html src/options/options.html",
+        "dev:all": "parcel --public-url ./ src/popup/popup.html src/options/options.html",
         "dev:options": "parcel src/options/options.html",
         "run:chrome": "web-ext run --target=chromium --browser-console",
         "run:firefox": "web-ext run --target=firefox-desktop --browser-console",
-        "start:chrome": "npm-run-all --parallel prepare run:chrome",
-        "start:firefox": "npm-run-all --parallel prepare run:firefox"
+        "start:chrome": "npm-run-all --parallel dev:all run:chrome",
+        "start:firefox": "npm-run-all --parallel dev:all run:firefox"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zlypher/delivery-notes.git"
+        "url": "https://github.com/zlypher/web-memo.git"
     },
     "bugs": {
-        "url": "https://github.com/zlypher/delivery-notes/issues"
+        "url": "https://github.com/zlypher/web-memo/issues"
     },
     "author": "Thomas Prochazka <thomas.prochazka@gmail.com>",
     "license": "MIT",

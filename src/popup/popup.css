@@ -16,13 +16,13 @@ body {
     overflow: auto;
 }
 
-.dn-restaurant-notes__footer {
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.dn-restaurant-notes__save {
+.save {
     align-self: flex-end;
     cursor: pointer;
 }

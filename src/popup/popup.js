@@ -1,7 +1,7 @@
 import browser from "webextension-polyfill";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
-import { loadNotesByIdentifier, saveNotes } from "../utils/note-storage";
+import { loadMemosByIdentifier, saveMemos } from "../utils/memo-storage";
 import { localizeHtmlPage } from "../utils/localize-html";
 
 async function getCurrentActiveTabUrl() {
@@ -27,26 +27,21 @@ function initializePopup() {
 async function initialize() {
     const { quill } = initializePopup();
 
-    // Step 3: Load notes if there are already some stored
+    // Load notes if there are already some stored
     const identifier = await getCurrentActiveTabUrl();
-    const savedNotes = await loadNotesByIdentifier(identifier);
-    if (savedNotes) {
-        quill.setContents(savedNotes);
+    const savedMemos = await loadMemosByIdentifier(identifier);
+    if (savedMemos) {
+        quill.setContents(savedMemos);
     }
 
-    document
-        .querySelector(".dn-restaurant-notes__options")
-        .addEventListener("click", async () => {
-            await browser.runtime.openOptionsPage();
-        });
+    document.querySelector(".options").addEventListener("click", async () => {
+        await browser.runtime.openOptionsPage();
+    });
 
-    document
-        .querySelector(".dn-restaurant-notes__save")
-        .addEventListener("click", () => {
-            const notes = quill.getContents();
-
-            saveNotes(identifier, notes);
-        });
+    document.querySelector(".save").addEventListener("click", () => {
+        const notes = quill.getContents();
+        saveMemos(identifier, notes);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", initialize);

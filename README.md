@@ -1,6 +1,6 @@
-# Delivery Notes
+# Web memo
 
-This web extension allows users to record and manage notes and experiences related to their takeout orders from websites like Lieferando.
+This web extension allows users to record and manage memos and experiences related to their takeout orders from websites like Amazon, Lieferando and many more.
 
 ## Features
 

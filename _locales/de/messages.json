@@ -1,16 +1,16 @@
 {
     "extensionName": {
-        "message": "Delivery Notes",
+        "message": "Web Memo",
         "description": "Name of the extension."
     },
     "extensionDescription": {
-        "message": "Eine Browser-Erweiterung, um Notizen und Erfahrungen zu Websites wie Lieferando zu erfassen und zu verwalten."
+        "message": "Eine Browser-Erweiterung, um Notizen und Erfahrungen zu Websites wie Amazon, Lieferando oder Andere zu erfassen und zu verwalten."
     },
     "popupTextPlaceholder": {
-        "message": "Mach dir hier ein paar Notizen zum Restaurant."
+        "message": "Mach dir hier ein paar Notizen zur Website."
     },
     "optionsHeadline": {
-        "message": "Delivery Notes Einstellungen"
+        "message": "Web Memo Einstellungen"
     },
     "popupOptionsLink": {
         "message": "Optionen"
@@ -19,7 +19,7 @@
         "message": "Speichern"
     },
     "optionsIntro": {
-        "message": "Hier finden Sie die Einstellungen zu Delivery Notes. Sie können Ihre gespeicherten Notizen verwalten und Einstellungen zum Datenschutz vornehmen."
+        "message": "Hier finden Sie die Einstellungen zu Web Memo. Sie können Ihre gespeicherten Notizen verwalten."
     },
     "optionsSavedNotes": {
         "message": "Gespeicherte Notizen"

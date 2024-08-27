@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "browser_specific_settings": {
         "gecko": {
-            "id": "zlypher@delivery-notes"
+            "id": "zlypher@web-memo"
         }
     },
     "name": "__MSG_extensionName__",

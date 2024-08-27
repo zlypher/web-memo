@@ -1,17 +1,17 @@
 import { localizeHtmlPage } from "../utils/localize-html";
-import { loadAllNotes, deleteNoteByIdentifier } from "../utils/note-storage";
+import { loadAllMemos, deleteMemoByIdentifier } from "../utils/memo-storage";
 
-const getNoteEntryTemplate = ({ key }) => {
+const getMemoEntryTemplate = ({ key }) => {
     return `
-<article class="dn-restaurant-notes__key">
+<article class="key">
     <div>${key}</div>
-    <button class="dn-restaurant-notes__del" data-key="${key}">x</button>
+    <button class="del" data-key="${key}">x</button>
 </article>
     `;
 };
 
-function createElementsForNotes(notes) {
-    const container = document.querySelector(".dn-restaurant-notes__keys");
+function createElementsForMemos(notes) {
+    const container = document.querySelector(".keys");
     if (!container || !notes) {
         return;
     }
@@ -22,13 +22,12 @@ function createElementsForNotes(notes) {
     }
 
     // Hide emtpy State
-    document.querySelector(".dn-restaurant-notes__notes-empty").style.display =
-        "none";
+    document.querySelector(".notes-empty").style.display = "none";
 
-    const wrapper = document.querySelector(".dn-restaurant-notes__keys");
+    const wrapper = document.querySelector(".keys");
 
     for (let [key, value] of entries) {
-        let html = getNoteEntryTemplate({ key });
+        let html = getMemoEntryTemplate({ key });
 
         const template = document.createElement("template");
         template.innerHTML = html;
@@ -41,21 +40,21 @@ function createElementsForNotes(notes) {
 async function initialize() {
     localizeHtmlPage();
 
-    let notes = await loadAllNotes();
-    createElementsForNotes(notes);
+    let notes = await loadAllMemos();
+    createElementsForMemos(notes);
 
     document.addEventListener("click", (evt) => {
         if (!evt.target) {
             return;
         }
 
-        if (evt.target.classList.contains("dn-restaurant-notes__del")) {
+        if (evt.target.classList.contains("del")) {
             const key = evt.target.dataset.key;
             if (!key) {
                 return;
             }
 
-            deleteNoteByIdentifier(key);
+            deleteMemoByIdentifier(key);
         }
     });
 }
