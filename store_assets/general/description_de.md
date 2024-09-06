@@ -1,3 +1,5 @@
+Diese Erweiterung ist noch in der Beta. Es kann sein, dass noch nicht alles 100% funktioniert.
+
 Web Memo erlaubt es dir, zu jeder Website Notizen zu hinterlegen.
 
 Hast du schon wieder vergessen, welches Gericht bei deinem Lieblingsrestaurant gut war oder welches du eher nicht mehr bestellen möchtest? Lege dir mit Web Memo eine Notiz an und behalte so denn Überblick.

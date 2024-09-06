@@ -2,6 +2,8 @@
 
 This web extension allows users to record and manage memos and experiences related to their takeout orders from websites like Amazon, Lieferando and many more.
 
+[Download Addon for Firefox](https://addons.mozilla.org/de/firefox/addon/web-memos/)
+
 ## Features
 
 tbd
@@ -14,7 +16,9 @@ tbd
 
 ### Firefox
 
-tbd
+-   Open Firefox
+-   Go to https://addons.mozilla.org/de/firefox/addon/web-memos/
+-   Click "Add to Firefox"
 
 ## Usage
 
