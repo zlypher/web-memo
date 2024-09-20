@@ -20,8 +20,8 @@ export async function deleteMemoByIdentifier(identifier) {
 export async function loadMemosByIdentifier(identifier) {
     try {
         let results = await browser.storage.sync.get(identifier);
-        if (results?.hasOwnProperty(key)) {
-            return results[key];
+        if (results?.hasOwnProperty(identifier)) {
+            return results[identifier];
         }
 
         return undefined;
