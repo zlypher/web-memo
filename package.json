@@ -2,12 +2,15 @@
     "name": "web-memo",
     "version": "1.0.0",
     "description": "A web extension to record and manage notes and experiences from your takeout orders on websites like Lieferando.",
-    "main": "index.js",
     "scripts": {
+        "clean": "rimraf ./dist ./web-ext-artifacts ./.parcel-cache",
         "translate": "wet",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "web-ext lint -i ./dist",
-        "build": "web-ext build",
+        "prebuild": "npm run clean",
+        "build:package": "parcel build --public-url ./ src/popup/popup.html src/options/options.html",
+        "build:ext": "web-ext build",
+        "build": "npm-run-all --sequential build:package build:ext",
         "dev:all": "parcel --public-url ./ src/popup/popup.html src/options/options.html",
         "dev:options": "parcel src/options/options.html",
         "run:chrome": "web-ext run --target=chromium --browser-console",
@@ -27,11 +30,12 @@
     "devDependencies": {
         "npm-run-all": "^4.1.5",
         "parcel": "^2.12.0",
+        "rimraf": "^6.0.1",
         "web-ext": "^8.2.0",
-        "web-ext-translator": "^4.3.0",
-        "webextension-polyfill": "^0.12.0"
+        "web-ext-translator": "^4.3.0"
     },
     "dependencies": {
-        "quill": "^2.0.2"
+        "quill": "^2.0.2",
+        "webextension-polyfill": "^0.12.0"
     }
 }
